@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <style>
+        #memories {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="memories"></div>
+    <script>
+        var mymap = L.map('memories').setView([51.4020, 21.1552], 14);
+        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=umhNLHN16tuMK6LH55PZ').addTo(mymap);
+
+        var grodziskoPiotrkowka = L.marker([51.3992728, 21.1336807]).addTo(mymap);
+        grodziskoPiotrkowka.bindPopup("Grodzisko \"Piortkówka\" <br><center>Piotrówka 24</center>");
+
+        var dawnyRatusz = L.marker([51.4033846, 21.1336807]).addTo(mymap);
+        dawnyRatusz.bindPopup("Dawny Ratusz <br><center>Rynek 1</center>")
+
+        var muryObronne = L.marker([51.4017207, 21.1419481]).addTo(mymap);
+        muryObronne.bindPopup("Mury Obronne <br><center>Wałowa 33</center>")
+
+        var domEsterki = L.marker([51.4035662, 21.1420458]).addTo(mymap);
+        domEsterki.bindPopup("Dom Esterki <br><center>Rynek 5</center>")
+
+        var domGaski = L.marker([51.4035429, 21.1422195]).addTo(mymap);
+        domGaski.bindPopup("Dom Gąski <br><center>Rynek 4</center>")
+
+        var kolegiumPijarow = L.marker([51.4020997, 21.1419719]).addTo(mymap);
+        kolegiumPijarow.bindPopup("Gmach Dawnego Kolegium Pijarów <br><center>Rynek 11</center>")
+
+        var pomnikCzynuLegionow = L.marker([51.4017701, 21.1440918]).addTo(mymap);
+        pomnikCzynuLegionow.bindPopup("Pomnik Czynu Legionów <br><center>Grodzka 10</center>")
+
+        var kosciolJanaChrzciciela = L.marker([51.4022741, 21.1444522]).addTo(mymap);
+        kosciolJanaChrzciciela.bindPopup("Kościół pw. św. Jana Chrzciciela <br><center>Rwańska 6</center>")
+
+        var rogatkaWarszawska = L.marker([51.4041166, 21.1495873]).addTo(mymap);
+        rogatkaWarszawska.bindPopup("Rogatka Warszawska <br><center>Malczewskiego 20</center>")
+
+        var mauzoleum = L.marker([51.405285, 21.1502606]).addTo(mymap);
+        mauzoleum.bindPopup("Mauzoleum płk. Dionizego Czachowskiego <br><center>Plac 72. Pułku Piechoty</center>")
+
+        var lozaMasonska = L.marker([51.4041396, 21.1485734]).addTo(mymap);
+        lozaMasonska.bindPopup("Loża Masońska <br><center>Malczewskiego 7</center>")
+
+        var domMalczewskiego = L.marker([51.4041166, 21.1495873]).addTo(mymap);
+        domMalczewskiego.bindPopup("Dom Jacka Malczewskiego <br><center>Malczewskiego 8</center>")
+
+        var drukarniaTrzebinskiego = L.marker([51.40130602982435, 21.151160305799312]).addTo(mymap);
+        drukarniaTrzebinskiego.bindPopup("Drukarnia Trzebińskiego <br><center>Żeromskiego 28</center>")
+
+        var plac3Maja = L.marker([51.4006400, 21.1539215]).addTo(mymap);
+        plac3Maja.bindPopup("Plac Konstytucji 3. Maja")
+
+        var gmachTowKredZiem = L.marker([51.4016497, 21.1543505]).addTo(mymap);
+        gmachTowKredZiem.bindPopup("Gmach Towarzystwa Kredytowego Ziemskiego <br><center>Żeromskiego 35</center>")
+
+        var parkKosciuszki = L.polygon([
+            [51.3980016, 21.1562619],
+            [51.4006133, 21.1573171],
+            [51.4003594, 21.1590334],
+            [51.3996968, 21.1592043],
+            [51.3978725, 21.1613640],
+            [51.3970565, 21.1609627]
+        ]).addTo(mymap);
+        parkKosciuszki.bindPopup("Park im. Tadeusza Kościuszki")
+
+        var klubSrodTwor = L.marker([51.400327, 21.1586821]).addTo(mymap);
+        klubSrodTwor.bindPopup("Klub Środowisk Twórczych i galeria \"Łaźnia\" <br><center>Żeromskiego 56</center>")
+
+        var kirkut = L.marker([51.4119956, 21.1981821]).addTo(mymap);
+        kirkut.bindPopup("Kirkut <br><center>Twarda 13</center>")
+    </script>
+</body>
+
+</html>
